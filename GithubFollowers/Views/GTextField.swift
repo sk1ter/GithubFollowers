@@ -33,6 +33,8 @@ class GTextField: UITextField {
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
         
+        autocapitalizationType = .none
+        
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
         
