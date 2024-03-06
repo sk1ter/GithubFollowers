@@ -17,6 +17,7 @@ class FollowerListViewController: UIViewController {
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     var followers: [Follower] = []
+    var filteredFollowers: [Follower] = []
     
     private var page = 1
     private var hasMoreFollowers = true
@@ -24,6 +25,7 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
@@ -66,14 +68,22 @@ class FollowerListViewController: UIViewController {
         })
     }
     
-    private func updateData() {
-        print(followers)
+    private func updateData(on followers: [Follower]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true, completion: nil)
         }
+    }
+    
+    private func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search for username"
+        
+        navigationItem.searchController = searchController
     }
     
     private func getFollowers(username: String, page: Int) {
@@ -91,13 +101,14 @@ class FollowerListViewController: UIViewController {
                 }
                 self.hasMoreFollowers = followers.count != 0
                 self.followers.append(contentsOf: followers)
-                self.updateData()
+                self.updateData(on: self.followers)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Error occured", message: error.rawValue, buttonTitle: "OK")
             }
            
         })
     }
+    
 }
 
 extension FollowerListViewController: UICollectionViewDelegate {
@@ -113,5 +124,22 @@ extension FollowerListViewController: UICollectionViewDelegate {
             page = page + 1
             getFollowers(username: username, page: page)
         }
+    }
+}
+
+
+extension FollowerListViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            return
+        }
+        
+        filteredFollowers = followers.filter {$0.login.lowercased().contains(filter.lowercased())}
+        updateData(on: filteredFollowers)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        filteredFollowers = []
+        updateData(on: followers)
     }
 }
