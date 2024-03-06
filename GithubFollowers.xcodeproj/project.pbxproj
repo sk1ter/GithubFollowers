@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		48755FBC2B98632500B633CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FBB2B98632500B633CE /* AppDelegate.swift */; };
 		48755FBE2B98632500B633CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FBD2B98632500B633CE /* SceneDelegate.swift */; };
-		48755FC02B98632500B633CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FBF2B98632500B633CE /* ViewController.swift */; };
 		48755FC52B98632600B633CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48755FC42B98632600B633CE /* Assets.xcassets */; };
 		48755FC82B98632600B633CE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 48755FC72B98632600B633CE /* Base */; };
 		48755FD32B98632700B633CE /* GithubFollowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FD22B98632600B633CE /* GithubFollowersTests.swift */; };
 		48755FDD2B98632700B633CE /* GithubFollowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FDC2B98632700B633CE /* GithubFollowersUITests.swift */; };
 		48755FDF2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FDE2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift */; };
+		48755FEC2B98967E00B633CE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FEB2B98967E00B633CE /* SearchViewController.swift */; };
+		48755FEE2B9896AC00B633CE /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FED2B9896AC00B633CE /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		48755FB82B98632500B633CE /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48755FBB2B98632500B633CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48755FBD2B98632500B633CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48755FBF2B98632500B633CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48755FC42B98632600B633CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48755FC72B98632600B633CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48755FC92B98632600B633CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		48755FD82B98632700B633CE /* GithubFollowersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubFollowersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48755FDC2B98632700B633CE /* GithubFollowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersUITests.swift; sourceTree = "<group>"; };
 		48755FDE2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		48755FEB2B98967E00B633CE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		48755FED2B9896AC00B633CE /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 			children = (
 				48755FBB2B98632500B633CE /* AppDelegate.swift */,
 				48755FBD2B98632500B633CE /* SceneDelegate.swift */,
-				48755FBF2B98632500B633CE /* ViewController.swift */,
+				48755FEB2B98967E00B633CE /* SearchViewController.swift */,
+				48755FED2B9896AC00B633CE /* FavoritesViewController.swift */,
 				48755FC42B98632600B633CE /* Assets.xcassets */,
 				48755FC62B98632600B633CE /* LaunchScreen.storyboard */,
 				48755FC92B98632600B633CE /* Info.plist */,
@@ -254,8 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48755FC02B98632500B633CE /* ViewController.swift in Sources */,
 				48755FBC2B98632500B633CE /* AppDelegate.swift in Sources */,
+				48755FEC2B98967E00B633CE /* SearchViewController.swift in Sources */,
+				48755FEE2B9896AC00B633CE /* FavoritesViewController.swift in Sources */,
 				48755FBE2B98632500B633CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
