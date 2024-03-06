@@ -16,6 +16,8 @@
 		48755FDF2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FDE2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift */; };
 		48755FEC2B98967E00B633CE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FEB2B98967E00B633CE /* SearchViewController.swift */; };
 		48755FEE2B9896AC00B633CE /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FED2B9896AC00B633CE /* FavoritesViewController.swift */; };
+		48755FF02B989B3300B633CE /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FEF2B989B3300B633CE /* GFButton.swift */; };
+		48755FF22B98A75A00B633CE /* GTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48755FF12B98A75A00B633CE /* GTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		48755FDE2B98632700B633CE /* GithubFollowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		48755FEB2B98967E00B633CE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		48755FED2B9896AC00B633CE /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		48755FEF2B989B3300B633CE /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		48755FF12B98A75A00B633CE /* GTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				48755FC42B98632600B633CE /* Assets.xcassets */,
 				48755FC62B98632600B633CE /* LaunchScreen.storyboard */,
 				48755FC92B98632600B633CE /* Info.plist */,
+				48755FEF2B989B3300B633CE /* GFButton.swift */,
+				48755FF12B98A75A00B633CE /* GTextField.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48755FBC2B98632500B633CE /* AppDelegate.swift in Sources */,
+				48755FF02B989B3300B633CE /* GFButton.swift in Sources */,
 				48755FEC2B98967E00B633CE /* SearchViewController.swift in Sources */,
+				48755FF22B98A75A00B633CE /* GTextField.swift in Sources */,
 				48755FEE2B9896AC00B633CE /* FavoritesViewController.swift in Sources */,
 				48755FBE2B98632500B633CE /* SceneDelegate.swift in Sources */,
 			);
